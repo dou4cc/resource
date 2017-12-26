@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<base href="https://github.com/dou4cc/resources/tree/master/">
+	<script>"use strict";
+		if(document.location.pathname.endsWith("/")) document.location.replace(document.location.href.slice(document.location.origin.length).match(/^(?:[^/]*\/){2}(.*)$/)[1]);
+	</script>
+</head>
+
+<body>
+	404 Not Found
+	<script>"use strict";
+		{
+			const button = document.createElement("button");
+			addEventListener("pageshow", () => {
+				button.textContent = "View this directory";
+				button.disabled = false;
+				button.focus();
+			});
+			button.addEventListener("click", () => {
+				button.disabled = true;
+				button.textContent = "Jumping";
+				document.location = document.location.pathname.match(/^(?:[^/]*\/){2}((?:.*\/)*)/)[1];
+			});
+			document.body.append(document.createElement("hr"), button);
+		}
+	</script>
+	<style>
+		button{
+			display: block;
+		}
+	</style>
+</body>
+
+</html>
